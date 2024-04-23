@@ -1,0 +1,82 @@
+.Homepage {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.Homepage-header {
+  background-color: #F5F5F5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.Header {
+  color: #4b2e83;
+  font-size: calc(10px + 2vmin);
+  align-items: center;
+  text-align: start;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 20px;
+  height: 50px;
+}
+
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333; /* Dark background for the navbar */
+    display: flex;
+    justify-content: space-around; /* Distributes space evenly around items */
+    align-items: center;
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Optional: adds shadow to top of navbar */
+}
+
+.nav-item {
+    text-align: center;
+    color: white;
+    text-decoration: none; /* Removes underline from links */
+    font-size: 12px;
+}
+
+.nav-item .icon-home,
+.nav-item .icon-todo,
+.nav-item .icon-account,
+.nav-item .icon-more {
+    display: block;
+    width: 24px; 
+    height: 24px; 
+    margin: 0 auto 5px; 
+    background-size: cover;
+}
+
+.icon-home { background-image: url('path/to/home-icon.png'); }
+.icon-todo { background-image: url('path/to/todo-icon.png'); }
+.icon-account { background-image: url('path/to/account-icon.png'); }
+.icon-more { background-image: url('path/to/more-icon.png'); }
