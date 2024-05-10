@@ -1,0 +1,70 @@
+.Header {
+  color: white;
+  font-size: calc(20px + 2vmin);
+  align-items: center;
+  text-align: center;
+  padding-left: 2%;;
+}
+
+.directory {
+  margin-top: 20px;
+  padding-left: 4%; /* Added left padding */
+  padding-right: calc(2% + 2px);
+  font-size: calc(5px + 1vmin);
+}
+
+.Header-Section {
+  background-color: #4b2e83;
+  min-height: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.card0 {
+  margin-top: 20px;
+  position: relative;
+  width: 98%;
+  border: 4px solid #ccc;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  margin-top: 20px;
+  position: relative;
+  width: 98%;
+  border: 4px solid #ccc;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #4b2e83;
+  color: white;
+}
+
+.card-content {
+  padding-top: 2%;
+  padding-left: 4%;
+  padding-bottom: 2%;
+}
+
+.card-title {
+  font-size: 30px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.card-subtitle {
+  font-size: 20px;
+  color: #666;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.other-info {
+  font-size: 18px;
+}
+
