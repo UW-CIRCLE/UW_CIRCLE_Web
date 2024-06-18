@@ -1,4 +1,7 @@
 import logo from './logo.svg';
+import React from 'react';
+import { Routes, Route, BrowserRoute } from "react-router-dom";
+import Homepage from "./pages/Homepage/homepage";
 import './App.css';
 
 function App() {
