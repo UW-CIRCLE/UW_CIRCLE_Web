@@ -2,6 +2,7 @@ import './homepage.css';
 import search from '../../search.png';
 import React, {useState} from 'react';
 import quad from '../../quad.jpg'
+import { Link } from 'react-router-dom';
 
 function Homepage() {
     const [isFavorite, setIsFavorite] = useState(false);
@@ -49,15 +50,15 @@ function createNavigationBar() {
     nav.className = 'bottom-nav';
   
     const navItems = [
-        { href: '/', iconClass: 'icon-home', text: '🏠 Home' },
-        { href: '/todo', iconClass: 'icon-todo', text: '📝 Todo List' },
-        { href: '/account', iconClass: 'icon-account', text: '👤 Account' },
-        { href: '/more', iconClass: 'icon-more', text: '⚙️ More' }
+        { to: '/', iconClass: 'icon-home', text: '🏠 Home' },
+        { to: '/todo', iconClass: 'icon-todo', text: '📝 Todo List' },
+        { to: '/account', iconClass: 'icon-account', text: '👤 Account' },
+        { to: '/more', iconClass: 'icon-more', text: '⚙️ More' }
     ];
   
     navItems.forEach(item => {
         const link = document.createElement('a');
-        link.href = item.href;
+        link.href = item.to;
         link.className = 'nav-item';
         link.addEventListener('click', function(event) {
             event.preventDefault(); // Prevent the link from navigating directly

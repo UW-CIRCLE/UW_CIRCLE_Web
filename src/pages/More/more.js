@@ -53,45 +53,45 @@ function More() {
   );
 }
 
-function createNavigationBar() {
-    const nav = document.createElement('nav');
-    nav.className = 'bottom-nav';
+// function createNavigationBar() {
+//     const nav = document.createElement('nav');
+//     nav.className = 'bottom-nav';
 
-    const navItems = [
-        { href: '/', iconClass: 'icon-home', text: '🏠 Home' },
-        { href: '/todo', iconClass: 'icon-todo', text: '📝 Todo List' },
-        { href: '/account', iconClass: 'icon-account', text: '👤 Account' },
-        { href: '/more', iconClass: 'icon-more', text: '⚙️ More' }
-    ];
+//     const navItems = [
+//         { href: '/', iconClass: 'icon-home', text: '🏠 Home' },
+//         { href: '/todo', iconClass: 'icon-todo', text: '📝 Todo List' },
+//         { href: '/account', iconClass: 'icon-account', text: '👤 Account' },
+//         { href: '/more', iconClass: 'icon-more', text: '⚙️ More' }
+//     ];
 
-    navItems.forEach(item => {
-        const link = document.createElement('a');
-        link.href = item.href;
-        link.className = 'nav-item';
-        link.addEventListener('click', function(event) {
-            event.preventDefault(); // Prevent the link from navigating directly
-            clearActiveStates(navItems);
-            this.classList.add('active');
-            // Optionally navigate manually if needed, like using window.location.href
-        });
-        const text = document.createElement('span');
-        text.textContent = item.text;
-        link.appendChild(text);
-        nav.appendChild(link);
-    });
+//     navItems.forEach(item => {
+//         const link = document.createElement('a');
+//         link.href = item.href;
+//         link.className = 'nav-item';
+//         link.addEventListener('click', function(event) {
+//             event.preventDefault(); // Prevent the link from navigating directly
+//             clearActiveStates(navItems);
+//             this.classList.add('active');
+//             // Optionally navigate manually if needed, like using window.location.href
+//         });
+//         const text = document.createElement('span');
+//         text.textContent = item.text;
+//         link.appendChild(text);
+//         nav.appendChild(link);
+//     });
 
-    document.body.appendChild(nav);
-}
+//     document.body.appendChild(nav);
+// }
 
-function clearActiveStates(navItems) {
-    navItems.forEach(item => {
-        const existingLinks = document.querySelectorAll('.nav-item');
-        existingLinks.forEach(link => {
-            link.classList.remove('active');
-        });
-    });
-}
+// function clearActiveStates(navItems) {
+//     navItems.forEach(item => {
+//         const existingLinks = document.querySelectorAll('.nav-item');
+//         existingLinks.forEach(link => {
+//             link.classList.remove('active');
+//         });
+//     });
+// }
 
-window.onload = createNavigationBar;
+// window.onload = createNavigationBar;
 
 export default More;
