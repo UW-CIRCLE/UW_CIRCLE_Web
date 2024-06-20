@@ -17,7 +17,8 @@
     "react-router-dom": "^6.23.0",
     "react-scripts": "^5.0.1",
     "stream": "^0.0.2",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "yarn": "^1.22.22"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -42,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "react-dev-utils": "^12.0.1"
   }
 }

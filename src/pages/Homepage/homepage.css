@@ -21,19 +21,19 @@
   color: #61dafb;
 }
 
-.Header {
+.page-header {
   color: #4b2e83;
   font-size: calc(20px + 2vmin);
   align-items: center;
   text-align: left;
-  padding-left: 2%;;
+  padding-left: 5%;;
 }
 
 .search-container {
   display: flex;
   justify-content: left;
   margin-top: 10px;
-  padding-left: 2%;
+  padding-left: 5%;
 }
 
 .search-bar {
@@ -64,48 +64,56 @@
 
 .onboard {
   padding-left: 4%; /* Added left padding */
-  padding-right: calc(2% + 2px); 
+  padding-right: 4%;
   font-size: calc(5px + 1vmin);
+}
+
+.onboard-header {
+  font-size: 24px;
+  color: black;
+  text-align: left;
 }
 
 .card {
   position: relative;
-  width: 60%;
-  border: 4px solid #ccc;
-  border-radius: 20px;
+  width: 80%;
+  border: 2px solid #ccc;
+  border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .card-img {
-  width: calc(96%); 
-  max-height: 200px;
+  width: 96%;
+  max-height: 250px;
   object-fit: cover;
-  border-radius: 20px;
-  padding-left: 2%;
-  padding-top: 2%;
+  border-radius: 10px;
+  margin-top: 2%;
+  margin-left: 2%;
   position: relative;
-  mix-blend-mode: multiply;
 }
 
 .card-content {
-  padding-top: 0%;
+  padding-top: 2%;
   padding-left: 2%;
 }
 
 .card-title {
-  font-size: 20px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  font-size: 24px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: black;
+  text-align: left;
 }
 
 .card-subtitle {
-  font-size: 14px;
+  font-size: 16px;
   color: #666;
-  margin-top: 5px;
-  margin-bottom: 20px;
-
+  margin-top: 10px;
+  margin-bottom: 30px;
+  text-align: left;
 }
+
 
 .card-favorite {
   position: absolute;
@@ -114,12 +122,12 @@
   font-size: 24px;
   color: white;
   cursor: pointer;
-  -webkit-text-stroke: 1px gold; 
+  -webkit-text-stroke: 1px gold;
 }
 
 .card-favorite.active {
-  color: gold; 
-  -webkit-text-stroke: none; 
+  color: gold;
+  -webkit-text-stroke: none;
 
 }
 
@@ -167,21 +175,22 @@
 
 .attention-section {
   padding-left: 4%; /* Added left padding */
-  padding-right: calc(2% + 2px); 
+  padding-right: 4%;
   font-size: calc(5px + 1vmin);
-  
 }
 
 .attention-header {
   font-size: 24px;
   color: black;
+  text-align: left;
 }
 
 .content-box {
-  border: 1px solid #4b2e83;
+  border: 1.5px solid #4b2e83;
   padding: 20px;
   margin-top: 10px;
   background-color: #f9f9f9;
+  border-radius: 10px;
 }
 
 .nav-item.active {

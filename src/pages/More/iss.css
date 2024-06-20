@@ -1,0 +1,7 @@
+.page-header {
+  color: white;
+  font-size: calc(20px + 2vmin);
+  align-items: center;
+  text-align: center;
+  padding-left: 2%;;
+}
