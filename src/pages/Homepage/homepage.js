@@ -14,7 +14,7 @@ function Homepage() {
   return (
     <div>
       <header class='.Homepage-header'>
-        <h1 class="page-header">CIRCLE</h1>
+        <h1 class="homepage-header">CIRCLE</h1>
       </header>
       <nav className="bottom-nav">
         <Link to="/" className="nav-item">🏠 Home</Link>
