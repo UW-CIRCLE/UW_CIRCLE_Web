@@ -24,6 +24,24 @@ function More() {
             <p class="card-subtitle">Visa documents, I-20, OPT, CPT</p>
           </div>
         </button>
+        <button class="card" type='button' onClick={() => handleClick('circle')}>
+          <div class="card-content">
+            <h2 class="card-title">CIRCLE</h2>
+            <p class="card-subtitle">A support system for international students</p>
+          </div>
+        </button>
+        <button class="card" type='button' onClick={() => handleClick('fyp')}>
+          <div class="card-content">
+            <h2 class="card-title">FYP</h2>
+            <p class="card-subtitle">AO, Dawg Daze</p>
+          </div>
+        </button>
+        <button class="card" type='button' onClick={() => handleClick('admission')}>
+          <div class="card-content">
+            <h2 class="card-title">Admission</h2>
+            <p class="card-subtitle"></p>
+          </div>
+        </button>
       </div>
       <nav className="bottom-nav">
         <Link to="/" className="nav-item">🏠 Home</Link>
