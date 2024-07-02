@@ -16,12 +16,6 @@ function Homepage() {
       <header class='.Homepage-header'>
         <h1 class="homepage-header">CIRCLE</h1>
       </header>
-      <nav className="bottom-nav">
-        <Link to="/" className="nav-item">🏠 Home</Link>
-        <Link to="/todo" className="nav-item">📝 Todo List</Link>
-        <Link to="/account" className="nav-item">👤 Account</Link>
-        <Link to="/more" className="nav-item">⚙️ More</Link>
-      </nav>
       <div class="search-container">
         <form class="search-bar" action="/search" method="get">
           <button class="search-button" type="submit">
@@ -47,6 +41,12 @@ function Homepage() {
           </div>
         </div>
       </div>
+      <nav className="bottom-nav">
+        <Link to="/" className="nav-item">🏠 Home</Link>
+        <Link to="/todo" className="nav-item">📝 Todo List</Link>
+        <Link to="/discover" className="nav-item">👤 Discover</Link>
+        <Link to="/more" className="nav-item">⚙️ More</Link>
+      </nav>
     </div>
   );
 }
