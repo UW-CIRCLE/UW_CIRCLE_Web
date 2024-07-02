@@ -1,0 +1,75 @@
+.Header {
+  color: white;
+  font-size: calc(20px + 2vmin);
+  align-items: center;
+  text-align: center;
+  padding-left: 2%;
+}
+
+.todo-list {
+  margin-top: 20px;
+  padding-left: 4%; /* Added left padding */
+  padding-right: calc(2% + 2px);
+  font-size: calc(5px + 1vmin);
+}
+
+.Header-Section {
+  background-color: #4b2e83;
+  min-height: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.card {
+  margin-top: 20px;
+  position: relative;
+  width: 98%;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.todo-card-content {
+  padding-top: 2%;
+  padding-left: 4%;
+  padding-bottom: 2%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.card-title {
+  font-size: 25px;
+}
+
+.card-subtitle {
+  font-size: 20px;
+  color: #666;
+}
+
+
+.date {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.arrow {
+  align-items: center;
+  justify-content: center;
+  margin-left: 25%;
+}
+
+.todo-vertical {
+  margin-left: 10%;
+}
+
+.forward-icon {
+  transform: scaleX(-1);
+  height: 6vh;
+  align-items: center;
+}

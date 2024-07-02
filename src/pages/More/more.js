@@ -46,7 +46,7 @@ function More() {
       <nav className="bottom-nav">
         <Link to="/" className="nav-item">🏠 Home</Link>
         <Link to="/todo" className="nav-item">📝 Todo List</Link>
-        <Link to="/account" className="nav-item">👤 Account</Link>
+        <Link to="/discover" className="nav-item">👤 Discover</Link>
         <Link to="/more" className="nav-item">⚙️ More</Link>
       </nav>
     </div>
