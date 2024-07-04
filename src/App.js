@@ -7,6 +7,7 @@ import Iss from './pages/More/iss';
 import CIRCLE from './pages/More/circle';
 import Fyp from './pages/More/fyp';
 import Admission from './pages/More/admission'
+import Todo from './pages/Todo/todo';
 import './App.css';
 
 
@@ -15,6 +16,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Homepage />} />
+        <Route path="/todo" element={<Todo />} />
         <Route path="/more" element={<More />} />
         <Route path="/more/iss" element={<Iss />} />
         <Route path="/more/circle" element={<CIRCLE/>} />
