@@ -2,13 +2,19 @@ import './homepage.css';
 import search from '../../search.png';
 import React, {useState} from 'react';
 import quad from '../../quad.jpg'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Homepage() {
   const [isFavorite, setIsFavorite] = useState(false);
 
   const toggleFavorite = () => {
     setIsFavorite(!isFavorite);
+  };
+
+  const navigate = useNavigate();
+
+  const handleClick = (cardName) => {
+    navigate(`/homepage/${cardName}`);
   };
 
   return (
@@ -32,14 +38,14 @@ function Homepage() {
       </div>
       <div class="onboard">
         <h1 class="onboard-header">Onboarding Resources</h1>
-        <div class="card">
+        <button class="card" type='button' onClick={() => handleClick('card')}>
           <img class="card-img" src={quad} alt="Quad" />
           <div class="card-content">
               <h3 class="card-title">Communication is key!</h3>
               <p class="card-subtitle">How to email professors for extensions or research opportunities?</p>
               <span class={isFavorite ? "card-favorite active" : "card-favorite"} onClick={toggleFavorite}>&#9733;</span>
           </div>
-        </div>
+        </button>
       </div>
       <nav className="bottom-nav">
         <Link to="/" className="nav-item">🏠 Home</Link>
