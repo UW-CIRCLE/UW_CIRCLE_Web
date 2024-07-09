@@ -1,7 +1,7 @@
-import logo from './logo.svg';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Homepage from "./pages/Homepage/homepage";
+import HomepageCard from './pages/Homepage/homepage_card';
 import More from './pages/More/more';
 import Iss from './pages/More/iss';
 import CIRCLE from './pages/More/circle';
@@ -16,6 +16,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Homepage />} />
+        <Route path="/homepage/card" element={<HomepageCard />} />
         <Route path="/todo" element={<Todo />} />
         <Route path="/more" element={<More />} />
         <Route path="/more/iss" element={<Iss />} />
