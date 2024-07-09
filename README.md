@@ -1,3 +1,7 @@
+---
+permalink: /index.html
+---
+
 # Website:
 Find us at http://app.circle.uw.edu/ (still in progress, will be up soon)
 
