@@ -14,7 +14,7 @@ function Admissions() {
 
   return (
     <body>
-      <div className="container">
+      <div className="iss-container">
         <button className="back-button" type="button" onClick={() => handleClick()}>
           <img className='back-icon' src={back} alt="Back" />
         </button>
