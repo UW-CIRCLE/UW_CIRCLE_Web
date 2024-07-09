@@ -31,7 +31,7 @@
   background-color: #f0f0f0;
 }
 
-.container {
+.iss-container {
   background-color: #D9D9D9;
   min-height: 2%;
   display: flex;
@@ -43,7 +43,7 @@
 
 .back-button {
   position: absolute;
-  top: 2%;
+  top: 3%;
   left: 3%;
   text-decoration: none;
   font-size: 16px;
