@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/UW_CIRCLE_Web/static/css/main.d1a21bcc.css",
-    "main.js": "/UW_CIRCLE_Web/static/js/main.8ff0202c.js",
+    "main.js": "/UW_CIRCLE_Web/static/js/main.1ed38f2a.js",
     "static/js/453.ed3810f9.chunk.js": "/UW_CIRCLE_Web/static/js/453.ed3810f9.chunk.js",
     "static/media/quad.jpg": "/UW_CIRCLE_Web/static/media/quad.8edf535f36988ac69230.jpg",
     "static/media/back_button_icon_home.jpeg": "/UW_CIRCLE_Web/static/media/back_button_icon_home.152915ded408b93e798d.jpeg",
     "static/media/search.png": "/UW_CIRCLE_Web/static/media/search.a1622a47113310c2ffaa.png",
     "index.html": "/UW_CIRCLE_Web/index.html",
     "main.d1a21bcc.css.map": "/UW_CIRCLE_Web/static/css/main.d1a21bcc.css.map",
-    "main.8ff0202c.js.map": "/UW_CIRCLE_Web/static/js/main.8ff0202c.js.map",
+    "main.1ed38f2a.js.map": "/UW_CIRCLE_Web/static/js/main.1ed38f2a.js.map",
     "453.ed3810f9.chunk.js.map": "/UW_CIRCLE_Web/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d1a21bcc.css",
-    "static/js/main.8ff0202c.js"
+    "static/js/main.1ed38f2a.js"
   ]
 }
