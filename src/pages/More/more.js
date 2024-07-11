@@ -38,8 +38,44 @@ function More() {
         </button>
         <button class="card" type='button' onClick={() => handleClick('admission')}>
           <div class="card-content">
-            <h2 class="card-title">Admission</h2>
-            <p class="card-subtitle"></p>
+            <h2 class="card-title">Admissions</h2>
+            <p class="card-subtitle">Outside transcripts, transfer credits, offer letter</p>
+          </div>
+        </button>
+        <button class="card" type='button' onClick={() => handleClick('registrar')}>
+          <div class="card-content">
+            <h2 class="card-title">Office of Registrar</h2>
+            <p class="card-subtitle">Registration, Grades, administrative services</p>
+          </div>
+        </button>
+        <button class="card" type='button' onClick={() => handleClick('uaa')}>
+          <div class="card-content">
+            <h2 class="card-title">UAA</h2>
+            <p class="card-subtitle">Undergraduate Advising</p>
+          </div>
+        </button>
+        <button class="card" type='button' onClick={() => handleClick('hhc')}>
+          <div class="card-content">
+            <h2 class="card-title">Hall Health Center</h2>
+            <p class="card-subtitle">Medical and Mental Health Care</p>
+          </div>
+        </button>
+        <button class="card" type='button' onClick={() => handleClick('immunity')}>
+          <div class="card-content">
+            <h2 class="card-title">Immunity</h2>
+            <p class="card-subtitle">Immunization requirements</p>
+          </div>
+        </button>
+        <button class="card" type='button' onClick={() => handleClick('uw-it')}>
+          <div class="card-content">
+            <h2 class="card-title">UW IT</h2>
+            <p class="card-subtitle">UW NetID, access, etc</p>
+          </div>
+        </button>
+        <button class="card" type='button' onClick={() => handleClick('study-abroad')}>
+          <div class="card-content">
+            <h2 class="card-title">Study Abroad Office</h2>
+            <p class="card-subtitle">Learn about Study Abroad</p>
           </div>
         </button>
       </div>

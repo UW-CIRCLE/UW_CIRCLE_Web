@@ -4,7 +4,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 
-function Admissions() {
+function UAA() {
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -18,11 +18,11 @@ function Admissions() {
         <button className="back-button" type="button" onClick={() => handleClick()}>
           <img className='back-icon' src={back} alt="Back" />
         </button>
-        <h1>Admissions Office</h1>
+        <h1>UAA</h1>
       </div>
       <main>
-        <p className='iss-function'>Admissions</p>
-        <p className='iss-service'>Enrollment Management, Office of Registrar</p>
+        <p className='iss-function'>Undergraduate Advising(UAA)</p>
+        <p className='iss-service'></p>
       </main>
       <hr />
       <main>
@@ -33,15 +33,15 @@ function Admissions() {
         </p>
         <p className='iss-name'>
           <b>Phone: </b>
-          <p className='iss-info'>206-543-9686 (Monday-Friday, 10a.m. - 4p.m.)</p>
+          <p className='iss-info'>206-543-2550</p>
         </p>
         <p className='iss-name'>
-          <b>Drop in appointments: </b>
-          <p className='iss-info'>1pm-4pm (except Tuesdays)</p>
+          <b>Email: </b>
+          <a href="mailto:advice@uw.edu" style={{ textDecoration: 'underline' }}>advice@uw.edu</a>
         </p>
         <p className='iss-name'>
           <b>Location: </b>
-          <a href="https://www.washington.edu/maps/#!/smz" style={{ textDecoration: 'underline' }}>320 Schmitz Hall</a>
+          <a href="https://www.washington.edu/maps/#!/mgh" style={{ textDecoration: 'underline' }}>141 Mary Gates Hall</a>
         </p>
       </main>
     </body>
@@ -49,4 +49,4 @@ function Admissions() {
 }
 
 
-export default Admissions;
+export default UAA;

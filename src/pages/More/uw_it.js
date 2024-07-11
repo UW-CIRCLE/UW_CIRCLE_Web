@@ -4,7 +4,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 
-function FYP() {
+function UWIT() {
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -18,34 +18,35 @@ function FYP() {
         <button className="back-button" type="button" onClick={() => handleClick()}>
           <img className='back-icon' src={back} alt="Back" />
         </button>
-        <h1>FYP</h1>
+        <h1>UW IT</h1>
       </div>
       <main>
-        <p className='iss-function'>First Year Programs</p>
-        <p className='iss-service'>AO, Dawg Daze, FIGs</p>
+        <p className='iss-function'>UW IT</p>
+        <p className='iss-service'>UW NetID, access, 2FA authentication, Workday</p>
       </main>
       <hr />
       <main>
         <p className='iss-subtitle'>Contact Detail</p>
         <p className='iss-name'>
           <b>Website: </b>
-          <a href="http://fyp.washington.edu" style={{ textDecoration: 'underline' }}>http://fyp.washington.edu</a>
+          <a href="https://itconnect.uw.edu" style={{ textDecoration: 'underline' }}>https://itconnect.uw.edu</a>
         </p>
         <p className='iss-name'>
-          <b>Phone(Voice): </b>
-          <p className='iss-info'>206-543-4905</p>
+        {/*Comment there is no Student Portal for CIRCLE */}
+          {/* <b>Student Portal: </b> 
+          <a href="https://isss.uw.edu" style={{ textDecoration: 'underline' }}>https://www.washington.edu/circle/</a> */}
         </p>
         <p className='iss-name'>
-          <b>Phone(Text): </b>
-          <p className='iss-info'>206-207-5564</p>
+          <b>Phone: </b>
+          <p className='iss-info'>206-221-5000</p>
         </p>
         <p className='iss-name'>
           <b>Email: </b>
-          <a href="mailto:fyp@uw.edu" style={{ textDecoration: 'underline' }}>fyp@uw.edu</a>
+          <a href="mailto:help@uw.edu" style={{ textDecoration: 'underline' }}>help@uw.edu</a>
         </p>
         <p className='iss-name'>
           <b>Location: </b>
-          <a href="https://www.washington.edu/maps/#!/mgh" style={{ textDecoration: 'underline' }}>120 Mary Gates Hall</a>
+          <a href="https://www.washington.edu/maps/#!/oug" style={{ textDecoration: 'underline' }}>Learning Technologies Help Desks Odegaard Undergraduate Library</a>
         </p>
       </main>
     </body>
@@ -53,4 +54,4 @@ function FYP() {
 }
 
 
-export default FYP;
+export default UWIT;
