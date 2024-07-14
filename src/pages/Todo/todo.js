@@ -6,22 +6,22 @@ import forward from '../../images/back_button_icon.png';
 
 function Todo() {
   const navigate = useNavigate();
-  
+
   const initialTodos = [
-    { date: 'Jul 15', title: 'ISS', subtitle: 'Visa documents, I-20, OPT, CPT', officeName: 'transcript', dueInDays: 1 },
-    { date: 'Sep 27', title: 'First Day of School', subtitle: 'Go Huskies!', officeName: 'school', dueInDays: 74 },
-    { date: 'Jul 30', title: 'Meeting', subtitle: 'Project discussion', officeName: 'meeting', dueInDays: 14 },
-    { date: 'Aug 1', title: 'Workshop', subtitle: 'React Workshop', officeName: 'workshop', dueInDays: 16 },
-    { date: 'Jul 20', title: 'Doctor Appointment', subtitle: 'Annual check-up', officeName: 'doctor', dueInDays: 5 },
-    { date: 'Jul 22', title: 'Grocery Shopping', subtitle: 'Buy vegetables', officeName: 'grocery', dueInDays: 7 },
-    { date: 'Aug 10', title: 'Vacation', subtitle: 'Beach trip', officeName: 'vacation', dueInDays: 25 },
-    { date: 'Aug 15', title: 'Conference', subtitle: 'Tech Conference', officeName: 'conference', dueInDays: 30 },
-    { date: 'Jul 28', title: 'Birthday Party', subtitle: "John's Birthday", officeName: 'birthday', dueInDays: 12 },
-    { date: 'Aug 5', title: 'Library', subtitle: 'Return books', officeName: 'library', dueInDays: 20 },
-    { date: 'Jul 18', title: 'Dentist Appointment', subtitle: 'Teeth cleaning', officeName: 'dentist', dueInDays: 3 },
-    { date: 'Jul 25', title: 'Gym', subtitle: 'Workout session', officeName: 'gym', dueInDays: 10 },
-    { date: 'Aug 3', title: 'Car Service', subtitle: 'Oil change', officeName: 'car', dueInDays: 18 },
-  ].sort((a, b) => new Date(a.date) - new Date(b.date));
+    { id: 1, date: 'Jul 15', title: 'ISS', subtitle: 'Visa documents, I-20, OPT, CPT', officeName: 'transcript', dueInDays: 1, checked: false },
+    { id: 2, date: 'Sep 27', title: 'First Day of School', subtitle: 'Go Huskies!', officeName: 'school', dueInDays: 74, checked: false },
+    { id: 3, date: 'Jul 30', title: 'Meeting', subtitle: 'Project discussion', officeName: 'meeting', dueInDays: 14, checked: false },
+    { id: 4, date: 'Aug 1', title: 'Workshop', subtitle: 'React Workshop', officeName: 'workshop', dueInDays: 16, checked: false },
+    { id: 5, date: 'Jul 20', title: 'Doctor Appointment', subtitle: 'Annual check-up', officeName: 'doctor', dueInDays: 5, checked: false },
+    { id: 6, date: 'Jul 22', title: 'Grocery Shopping', subtitle: 'Buy vegetables', officeName: 'grocery', dueInDays: 7, checked: false },
+    { id: 7, date: 'Aug 10', title: 'Vacation', subtitle: 'Beach trip', officeName: 'vacation', dueInDays: 25, checked: false },
+    { id: 8, date: 'Aug 15', title: 'Conference', subtitle: 'Tech Conference', officeName: 'conference', dueInDays: 30, checked: false },
+    { id: 9, date: 'Jul 28', title: 'Birthday Party', subtitle: "John's Birthday", officeName: 'birthday', dueInDays: 12, checked: false },
+    { id: 10, date: 'Aug 5', title: 'Library', subtitle: 'Return books', officeName: 'library', dueInDays: 20, checked: false },
+    { id: 11, date: 'Jul 18', title: 'Dentist Appointment', subtitle: 'Teeth cleaning', officeName: 'dentist', dueInDays: 3, checked: false },
+    { id: 12, date: 'Jul 25', title: 'Gym', subtitle: 'Workout session', officeName: 'gym', dueInDays: 10, checked: false },
+    { id: 13, date: 'Aug 3', title: 'Car Service', subtitle: 'Oil change', officeName: 'car', dueInDays: 18, checked: false },
+  ];
 
   const [selectedCategory, setSelectedCategory] = useState('');
   const [todos, setTodos] = useState(initialTodos);
@@ -49,7 +49,7 @@ function Todo() {
       }
     });
 
-    setFilteredTodos(newFilteredTodos.sort((a, b) => new Date(a.date) - new Date(b.date)));
+    setFilteredTodos(newFilteredTodos.sort((a, b) => a.checked - b.checked || new Date(a.date) - new Date(b.date)));
     setMessage('Refresh successfully');
     setTimeout(() => {
       setMessage('');
@@ -57,22 +57,40 @@ function Todo() {
   };
 
   useEffect(() => {
-    setFilteredTodos(todos.sort((a, b) => new Date(a.date) - new Date(b.date)));
+    setFilteredTodos(todos.sort((a, b) => a.checked - b.checked || new Date(a.date) - new Date(b.date)));
   }, [todos]);
 
-  const TodoCard = ({ date, title, subtitle, officeName }) => (
-    <button className="card" type="button" onClick={() => handleClick(officeName)}>
-      <div className="todo-card-content">
-        <div className="date">{date}</div>
-        <div className="todo-vertical">
-          <h2 className="card-title">{title}</h2>
-          <p className="card-subtitle">{subtitle}</p>
+  const handleCheckboxChange = (id) => {
+    const newTodos = todos.map(todo => {
+      if (todo.id === id) {
+        return { ...todo, checked: !todo.checked };
+      }
+      return todo;
+    });
+    setTodos(newTodos.sort((a, b) => a.checked - b.checked || new Date(a.checked) - new Date(b.checked) || new Date(a.date) - new Date(b.date)));
+  };
+
+  const TodoCard = ({ id, date, title, subtitle, officeName, checked }) => (
+    <div className="todo-card" key={id}>
+      <input 
+        type="checkbox" 
+        checked={checked} 
+        onChange={() => handleCheckboxChange(id)} 
+        className="todo-checkbox"
+      />
+      <button className={`card ${checked ? 'checked' : ''}`} type="button" onClick={() => handleClick(officeName)}>
+        <div className="todo-card-content">
+          <div className="date">{date}</div>
+          <div className="todo-vertical">
+            <h2 className="card-title">{title}</h2>
+            <p className="card-subtitle">{subtitle}</p>
+          </div>
+          <div className="arrow">
+            <img className="forward-icon" src={forward} alt="Forward" />
+          </div>
         </div>
-        <div className="arrow">
-          <img className="forward-icon" src={forward} alt="Forward" />
-        </div>
-      </div>
-    </button>
+      </button>
+    </div>
   );
 
   return (
@@ -95,8 +113,8 @@ function Todo() {
         {message && <p className="refresh-message">{message}</p>}
       </div>
       <div className="todo-list">
-        {filteredTodos.map((todo, index) => (
-          <TodoCard key={index} {...todo} />
+        {filteredTodos.map((todo) => (
+          <TodoCard key={todo.id} {...todo} />
         ))}
       </div>
       <nav className="bottom-nav">
