@@ -24,9 +24,15 @@ function Todo() {
   ];
 
   const [selectedCategory, setSelectedCategory] = useState('');
-  const [todos, setTodos] = useState(initialTodos);
-  const [filteredTodos, setFilteredTodos] = useState(initialTodos);
+  const [todos, setTodos] = useState([]);
+  const [filteredTodos, setFilteredTodos] = useState([]);
   const [message, setMessage] = useState('');
+
+  useEffect(() => {
+    const sortedTodos = initialTodos.sort((a, b) => new Date(a.date) - new Date(b.date));
+    setTodos(sortedTodos);
+    setFilteredTodos(sortedTodos);
+  }, []);
 
   const handleClick = (officeName) => {
     navigate(`/todo/${officeName}`);
@@ -56,10 +62,6 @@ function Todo() {
     }, 10000);
   };
 
-  useEffect(() => {
-    setFilteredTodos(todos.sort((a, b) => a.checked - b.checked || new Date(a.date) - new Date(b.date)));
-  }, [todos]);
-
   const handleCheckboxChange = (id) => {
     const newTodos = todos.map(todo => {
       if (todo.id === id) {
@@ -67,7 +69,19 @@ function Todo() {
       }
       return todo;
     });
-    setTodos(newTodos.sort((a, b) => a.checked - b.checked || new Date(a.checked) - new Date(b.checked) || new Date(a.date) - new Date(b.date)));
+    const sortedTodos = newTodos.sort((a, b) => a.checked - b.checked || new Date(a.date) - new Date(b.date));
+    setTodos(sortedTodos);
+    setFilteredTodos(sortedTodos.filter(todo => {
+      switch (selectedCategory) {
+        case '1_day': return todo.dueInDays <= 1;
+        case '3_days': return todo.dueInDays <= 3;
+        case '1_week': return todo.dueInDays <= 7;
+        case '2_weeks': return todo.dueInDays <= 14;
+        case '1_month': return todo.dueInDays <= 30;
+        case '3_month': return todo.dueInDays <= 90;
+        default: return true;
+      }
+    }).sort((a, b) => a.checked - b.checked || new Date(a.date) - new Date(b.date)));
   };
 
   const TodoCard = ({ id, date, title, subtitle, officeName, checked }) => (
