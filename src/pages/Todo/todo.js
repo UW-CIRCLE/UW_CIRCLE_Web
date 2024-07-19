@@ -59,7 +59,7 @@ function Todo() {
     setMessage('Refresh successfully');
     setTimeout(() => {
       setMessage('');
-    }, 10000);
+    }, 5000);
   };
 
   const handleCheckboxChange = (id) => {
