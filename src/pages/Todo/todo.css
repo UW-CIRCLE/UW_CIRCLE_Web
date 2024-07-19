@@ -34,12 +34,26 @@
   background-color: white;
 }
 
-.todo-card-content {
-  padding-top: 2%;
-  padding-left: 4%;
-  padding-bottom: 2%;
+.checked {
+  border: 2px solid #4b2e83;
+  box-shadow: 0 4px 8px rgba(75, 46, 131, 0.4);
+}
+
+.todo-card {
   display: flex;
-  text-align: center;
+  align-items: center;
+}
+
+.todo-checkbox {
+  margin-right: 15px;
+  transform: scale(2);
+  accent-color: #4b2e83; /* Adjust checkbox color */
+  
+}
+
+.todo-card-content {
+  padding: 2% 4%;
+  display: flex;
   align-items: center;
 }
 
@@ -52,24 +66,75 @@
   color: #666;
 }
 
-
 .date {
   font-size: 25px;
   font-weight: bold;
 }
 
 .arrow {
+  display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 25%;
+  margin-left: auto; /* Pushes the arrow to the far right */
 }
 
 .todo-vertical {
   margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers the text vertically */
 }
 
 .forward-icon {
   transform: scaleX(-1);
   height: 6vh;
   align-items: center;
+}
+
+/* New CSS class to align text horizontally */
+.text-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.category-section {
+  margin-top: 20px;
+  padding-left: 4%;
+  display: flex;
+  align-items: center;
+}
+
+.category-section label {
+  margin-right: 10px;
+}
+
+.category-section select {
+  margin-right: 10px;
+  padding: 5px;
+  font-size: 1rem;
+}
+
+.category-section button {
+  padding: 5px 10px;
+  font-size: 1rem;
+  background-color: #4b2e83;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.refresh-message {
+  color: white;
+  margin-top: 20px;
+  margin-right: 15px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: right;
+  width: 100%;
+  position: absolute;
+  top: 40px; /* Adjust as necessary */
+  left: 0;
 }
