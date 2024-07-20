@@ -17,6 +17,8 @@ function Homepage() {
     navigate(`/homepage/${cardName}`);
   };
 
+  const boxArray = Array(8).fill(null); 
+
   return (
     <div>
       <header class='.Homepage-header'>
@@ -38,14 +40,20 @@ function Homepage() {
       </div>
       <div class="onboard">
         <h1 class="onboard-header">Onboarding Resources</h1>
-        <button class="card" type='button' onClick={() => handleClick('card')}>
-          <img class="card-img" src={quad} alt="Quad" />
-          <div class="card-content">
-              <h3 class="card-title">Communication is key!</h3>
-              <p class="card-subtitle">How to email professors for extensions or research opportunities?</p>
-              <span class={isFavorite ? "card-favorite active" : "card-favorite"} onClick={toggleFavorite}>&#9733;</span>
-          </div>
-        </button>
+        <div className ="cards-container">
+          {boxArray.map((_, index) => (
+            <div key={index} className = 'card-wrapper'>
+                <button key = {index} className="card" type='button' onClick={() => handleClick('card')}>
+                <img class="card-img" src={quad} alt="Quad" />
+                <div class="card-content">
+                  <h3 class="card-title">Communication is key!</h3>
+                  <p class="card-subtitle">How to email professors for extensions or research opportunities?</p>
+                  <span class={isFavorite ? "card-favorite active" : "card-favorite"} onClick={toggleFavorite}>&#9733;</span>
+                </div>
+              </button>
+            </div>
+          ))}
+        </div>
       </div>
       <nav className="bottom-nav">
         <Link to="/" className="nav-item">🏠 Home</Link>
