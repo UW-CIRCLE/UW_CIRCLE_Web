@@ -75,6 +75,21 @@
   text-align: left;
 }
 
+
+.cards-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 100px;
+}
+
+.card-wrapper {
+  flex: 0 1 calc(25% - 10px); 
+  margin: 5px;
+  box-sizing: border-box;
+}
+
 .card {
   position: relative;
   width: 80%;
@@ -198,4 +213,69 @@
 .nav-item.active {
   background-color: #4b2e83; /* Change to red when active */
   color: white;
+}
+
+
+
+/*making the boxes titles scalable using media queries using the width given from flex in card.wrapper*/
+/*At max-width: 1200px, the cards will switch to 3 per rowx*/
+@media (max-width: 1200px) {
+  .card-wrapper {
+    flex: 0 1 calc(33.33% - 10px);
+  }
+  
+  .card-title {
+    font-size: 20px;
+  }
+
+  .card-subtitle {
+    font-size: 14px;
+  }
+
+  .card-favorite {
+    font-size: 20px;
+  }
+}
+
+
+
+
+
+/*At max-width: 900px, the cards will switch to 2 per row.x*/
+@media (max-width: 900px) {
+  .card-wrapper {
+    flex: 0 1 calc(50% - 10px); /* 2 cards per row */
+  }
+  
+  .card-title {
+    font-size: 18px;
+  }
+
+  .card-subtitle {
+    font-size: 12px;
+  }
+
+  .card-favorite {
+    font-size: 18px;
+  }
+}
+
+
+/*At max-width: 600px, the cards will switch to 1 per row*/
+@media (max-width: 600px) {
+  .card-wrapper {
+    flex: 0 1 100%; /* 1 card per row */
+  }
+  
+  .card-title {
+    font-size: 16px;
+  }
+
+  .card-subtitle {
+    font-size: 12px;
+  }
+
+  .card-favorite {
+    font-size: 16px;
+  }
 }
