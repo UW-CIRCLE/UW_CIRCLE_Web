@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Homepage from "./pages/Homepage/homepage";
+import DiscoverPage from './pages/Discover/discoverpage';
 import HomepageCard from './pages/Homepage/homepage_card';
 import More from './pages/More/more';
 import Iss from './pages/More/iss';
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/homepage/card" element={<HomepageCard />} />
         <Route path="/todo" element={<Todo />} />
+        <Route path="/discover" element={<DiscoverPage />} />
         <Route path="/more" element={<More />} />
         <Route path="/more/iss" element={<Iss />} />
         <Route path="/more/circle" element={<CIRCLE/>} />

@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+.discoverPage-Header-Section {
+  margin-top: 42px;
+}
+
+.discoverPage-header {
+  width: 294px;
+  height: 30px;
+  margin-top: 42px;
+  margin-left: 28px;
+  font-family: 'Inria Sans', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26.38px;
+}
+
+@media (min-width: 768px) {
+    .discoverPage-header {
+      font-size: 28px; 
+      line-height: 34px; 
+      max-width: 100%; 
+      margin: 42px auto; 
+    }
+  }
+
+.news-feed-item {
+    display: flex;
+    align-items: flex-start;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px;
+}
+
+.news-image {
+    width: 100px; 
+    height: 100px; 
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.news-image-container {
+    display: flex;
+    align-items: center; 
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.news-content {
+    display: flex;
+    flex-direction: column;
+    width: 205px;
+    height: 32px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.news-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20.05px;
+    margin-top: 5px;
+    font-family: 'Abhaya Libre', serif;
+    color: #252525;
+}
+
+.news-subtitle {
+    font-size: 12px; 
+    color: #252525;
+    font-family: 'Abhaya Libre', serif;
+    margin-top: 0px; 
+}
+
+
+  
