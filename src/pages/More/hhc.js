@@ -21,7 +21,7 @@ function HHC() {
         <h1>Hall Health Center</h1>
       </div>
       <main>
-        <p className='iss-function'>Hall Health Center</p>
+        <p className='iss-function'>Husky Health Center</p>
         <p className='iss-service'>Medical and Mental Health Care to Student Body as well as Established Non-student Patients
         </p>
       </main>

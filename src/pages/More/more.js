@@ -56,7 +56,7 @@ function More() {
         </button>
         <button class="card" type='button' onClick={() => handleClick('hhc')}>
           <div class="card-content">
-            <h2 class="card-title">Hall Health Center</h2>
+            <h2 class="card-title">Husky Health Center</h2>
             <p class="card-subtitle">Medical and Mental Health Care</p>
           </div>
         </button>

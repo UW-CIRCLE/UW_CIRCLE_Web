@@ -9,6 +9,12 @@ import CIRCLE from './pages/More/circle';
 import Fyp from './pages/More/fyp';
 import Admission from './pages/More/admission'
 import Todo from './pages/Todo/todo';
+import Registrar from './pages/More/registrar';
+import UAA from './pages/More/uaa';
+import HHC from './pages/More/hhc';
+import Immunity from './pages/More/immunity';
+import UWIT from './pages/More/uw_it';
+import Abroad from './pages/More/study_abroad';
 import './App.css';
 
 
@@ -25,6 +31,12 @@ function App() {
         <Route path="/more/circle" element={<CIRCLE/>} />
         <Route path="/more/fyp" element={<Fyp/>} />
         <Route path="/more/admission" element={<Admission/>} />
+        <Route path="/more/registrar" element={<Registrar/>} />
+        <Route path="/more/uaa" element={<UAA/>} />
+        <Route path="/more/hhc" element={<HHC/>} />
+        <Route path="/more/immunity" element={<Immunity/>} />
+        <Route path="/more/uw-it" element={<UWIT/>} />
+        <Route path="/more/study-abroad" element={<Abroad/>} />
       </Routes>
     </Router>
   );
