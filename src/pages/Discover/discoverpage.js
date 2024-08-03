@@ -48,10 +48,9 @@ function DiscoverPage() {
                 <h2 className="news-title">{title}</h2>
                 <p className="news-subtitle">{subtitle}</p>
             </div>
-            {image && (
             <div className="news-image-container">
                 <img src={image} alt={title} className="news-image"/>
-            </div>)}
+            </div>
         </div>
       );
     

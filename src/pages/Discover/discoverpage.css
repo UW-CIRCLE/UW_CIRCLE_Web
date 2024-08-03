@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
+:root {
+    --dynamic-margin-left: calc((220vw - 768px) / 2); 
+}
+
 .discoverPage-Header-Section {
   margin-top: 42px;
 }
@@ -43,7 +47,7 @@
 
 .news-feed-item {
     display: flex;
-    align-items: flex-start;
+    justify-content: space-between;
     background-color: #fff;
     padding: 10px;
     border-radius: 8px;
@@ -65,7 +69,7 @@
     display: flex;
     align-items: center; 
     margin-top: 20px;
-    margin-left: 20px;
+    
 }
 
 .news-content {
@@ -75,6 +79,7 @@
     height: 32px;
     margin-top: 20px;
     margin-left: 20px;
+    
 }
 
 .news-title {
@@ -95,7 +100,8 @@
 
 @media (min-width: 768px) {
     .news-feed-item {
-        flex-direction: row; 
+        flex-direction: column;
+        align-items: flex-start; 
     } 
     .news-image {
         width: 150px; 
@@ -104,7 +110,8 @@
         object-fit: cover;
     }
     .news-image-container {
-        margin-left: 1300px;
+        margin-left: var(--dynamic-margin-left);
+        margin-top: 20px;
     }
     .news-content {
         display: flex;
@@ -113,10 +120,10 @@
     }
     .news-title {
         margin-top: 60px;
-        font-size: 35px; 
+        font-size: calc(35px + (10vw - 768px) * 0.02); 
     }
     .news-subtitle {
-        font-size: 25px; 
+        font-size: calc(35px + (5vw - 768px) * 0.02); 
     }
 }
 
