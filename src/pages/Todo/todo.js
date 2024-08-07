@@ -8,19 +8,17 @@ function Todo() {
   const navigate = useNavigate();
 
   const initialTodos = [
-    { id: 1, date: 'Jul 15', title: 'ISS', subtitle: 'Visa documents, I-20, OPT, CPT', officeName: 'transcript', dueInDays: 1, checked: false },
-    { id: 2, date: 'Sep 27', title: 'First Day of School', subtitle: 'Go Huskies!', officeName: 'school', dueInDays: 74, checked: false },
-    { id: 3, date: 'Jul 30', title: 'Meeting', subtitle: 'Project discussion', officeName: 'meeting', dueInDays: 14, checked: false },
-    { id: 4, date: 'Aug 1', title: 'Workshop', subtitle: 'React Workshop', officeName: 'workshop', dueInDays: 16, checked: false },
-    { id: 5, date: 'Jul 20', title: 'Doctor Appointment', subtitle: 'Annual check-up', officeName: 'doctor', dueInDays: 5, checked: false },
-    { id: 6, date: 'Jul 22', title: 'Grocery Shopping', subtitle: 'Buy vegetables', officeName: 'grocery', dueInDays: 7, checked: false },
-    { id: 7, date: 'Aug 10', title: 'Vacation', subtitle: 'Beach trip', officeName: 'vacation', dueInDays: 25, checked: false },
-    { id: 8, date: 'Aug 15', title: 'Conference', subtitle: 'Tech Conference', officeName: 'conference', dueInDays: 30, checked: false },
-    { id: 9, date: 'Jul 28', title: 'Birthday Party', subtitle: "John's Birthday", officeName: 'birthday', dueInDays: 12, checked: false },
-    { id: 10, date: 'Aug 5', title: 'Library', subtitle: 'Return books', officeName: 'library', dueInDays: 20, checked: false },
-    { id: 11, date: 'Jul 18', title: 'Dentist Appointment', subtitle: 'Teeth cleaning', officeName: 'dentist', dueInDays: 3, checked: false },
-    { id: 12, date: 'Jul 25', title: 'Gym', subtitle: 'Workout session', officeName: 'gym', dueInDays: 10, checked: false },
-    { id: 13, date: 'Aug 3', title: 'Car Service', subtitle: 'Oil change', officeName: 'car', dueInDays: 18, checked: false },
+    { id: 1, date: 'N/A', title: 'Orientation & Course Registration', subtitle: 'Make an A&O Reservation & Register for Classes', officeName: 'Registration', dueInDays: null, checked: false },
+    { id: 2, date: 'N/A', title: 'UW Account I', subtitle: 'Activate UW Email and Update Pronouns', officeName: 'Account', dueInDays: null, checked: false },
+    { id: 3, date: 'N/A', title: 'UW Account II', subtitle: 'Sign up for Duo-UW2-Factor Authentication', officeName: 'Account', dueInDays: null, checked: false },
+    { id: 4, date: 'ASAP', title: 'Application', subtitle: 'Submit Your Final Transcripts', officeName: 'Application', dueInDays: null, checked: false },
+    { id: 5, date: 'N/A', title: 'Vaccination I', subtitle: 'Measles & Mumps Immunization Verified by UW', officeName: 'Application', dueInDays: null, checked: false },
+    { id: 6, date: 'N/A', title: 'Vaccination II', subtitle: 'Meningitis Immunization Verified by UW', officeName: 'Application', dueInDays: null, checked: false },
+    { id: 7, date: 'N/A', title: 'IX Course', subtitle: 'Title IX Course Completion Verified by UW', officeName: 'Application', dueInDays: null, checked: false },
+    { id: 8, date: 'N/A', title: 'UW Account III', subtitle: 'Access MyISSS (F & J Visa Holders Only)', officeName: 'US', dueInDays: null, checked: false },
+    { id: 9, date: 'N/A', title: 'UW Account & Files', subtitle: "Request Your I-20/DS-2019 (F & J Visa Holders Only)", officeName: 'US', dueInDays: null, checked: false },
+    { id: 10, date: 'N/A', title: 'Visa', subtitle: 'Obtain Your Visa (F & J Visa Holders Only)', officeName: 'US', dueInDays: null, checked: false },
+    { id: 11, date: 'N/A', title: 'Visa Check-in', subtitle: 'Complete the F-1 or J-1 Immigration Check-in Request', officeName: 'UW', dueInDays: null, checked: false },
   ];
 
   const [selectedCategory, setSelectedCategory] = useState('');
